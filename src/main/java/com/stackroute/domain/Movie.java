@@ -4,10 +4,21 @@ public class Movie {
 
     private String movieName;
     private Actor actor;
+    private int Id;
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
 
     public Movie() {
     }
-
+    public Movie(Actor actor){
+        this.actor=actor;
+    }
     public Movie(String movieName, Actor actor) {
         this.movieName = movieName;
         this.actor = actor;

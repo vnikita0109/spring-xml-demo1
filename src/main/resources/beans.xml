@@ -5,14 +5,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="actor" class="com.stackroute.domain.Actor">
-    <property name="name" value="Lee Jong Suk"></property>
-    <property name="gender" value="Male"></property>
-    <property name="age" value="28"></property>
-</bean>
+    <bean id="actor1" class="com.stackroute.domain.Actor">
+        <property name="name" value="Oh young Do"></property>
+        <property name="gender" value="Male"></property>
+        <property name="age" value="29"></property>
+    </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="movieName" value="VIP2"></property>
+    <bean id="actor2" class="com.stackroute.domain.Actor">
+        <property name="name" value="Park Min Song"></property>
+        <property name="gender" value="Female"></property>
+        <property name="age" value="25"></property>
+    </bean>
+
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
+        <property name="movieName" value="Royal Tailor"></property>
         <property name="actor" ref="actor"></property>
+        <property name="id" value="99"></property>
     </bean>
 </beans>
