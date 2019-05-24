@@ -27,4 +27,9 @@
     <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
 
     <bean id="resourceLoaderAwareDemo" class="com.stackroute.awareInterface.ResourceLoaderAwareDemo"></bean>
+
+    <bean id="beanLifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+    </bean>
+
+
 </beans>

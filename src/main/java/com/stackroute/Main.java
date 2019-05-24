@@ -19,7 +19,6 @@ public class Main {
         Movie movie0=(Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie");
         System.out.println(movie0.getActor().getName()+ " acted in: " + movie0.getMovieName());
 */
-
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=context.getBean("movie",Movie.class);
         System.out.println(movie.getMovieName()+" has actor "+movie.getActor().getName());
@@ -30,5 +29,8 @@ public class Main {
        Movie movie1=context.getBean("Doctor",Movie.class);
         Movie movie2=context.getBean("Highkick",Movie.class);
         System.out.println(movie1==movie2);*/
+
+       ClassPathXmlApplicationContext obj=(ClassPathXmlApplicationContext)context;
+       obj.destroy();
     }
 }
