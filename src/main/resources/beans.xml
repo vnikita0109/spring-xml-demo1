@@ -5,21 +5,26 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
+    <bean id="actor" class="com.stackroute.domain.Actor">
         <property name="name" value="Oh young Do"></property>
         <property name="gender" value="Male"></property>
         <property name="age" value="29"></property>
     </bean>
 
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Park Min Song"></property>
-        <property name="gender" value="Female"></property>
-        <property name="age" value="25"></property>
-    </bean>
+
 
     <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
-        <property name="movieName" value="Royal Tailor"></property>
+        <property name="movieName" value="VIP2"></property>
         <property name="actor" ref="actor"></property>
         <property name="id" value="99"></property>
     </bean>
+
+    <bean xml:id="applicationContextAwareDemo" class="com.stackroute.awareInterface.ApplicationContexAwaretDemo">
+
+    </bean>
+    <bean id="beanFactoryAwareDemo" class="com.stackroute.awareInterface.BeanFactoryAwareDemo"></bean>
+
+    <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
+
+    <bean id="resourceLoaderAwareDemo" class="com.stackroute.awareInterface.ResourceLoaderAwareDemo"></bean>
 </beans>
