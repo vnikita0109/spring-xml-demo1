@@ -5,21 +5,44 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="actor1" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="Lee Jong Suk"></constructor-arg>
+        <constructor-arg name="gender" value="Male"></constructor-arg>
+        <constructor-arg name="age" value="28"></constructor-arg>
+    </bean>
+
+    <bean id="actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="Oh young Do"></constructor-arg>
+        <constructor-arg name="gender" value="Male"></constructor-arg>
+        <constructor-arg name="age" value="29"></constructor-arg>
+    </bean>
+
     <bean id="actor" class="com.stackroute.domain.Actor">
-        <property name="name" value="Oh young Do"></property>
-        <property name="gender" value="Male"></property>
-        <property name="age" value="29"></property>
+        <property name="name" value="Kang chul soo"></property>
+        <property name="gender" value="Female"></property>
+        <property name="age" value="26"></property>
     </bean>
 
 
 
-    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
+    <bean id="Doctor, Highkick" class="com.stackroute.domain.Movie" scope="prototype">
         <property name="movieName" value="VIP2"></property>
         <property name="actor" ref="actor"></property>
         <property name="id" value="99"></property>
     </bean>
 
-    <bean xml:id="applicationContextAwareDemo" class="com.stackroute.awareInterface.ApplicationContexAwaretDemo">
+
+    <bean id="movie1" class="com.stackroute.domain.Movie">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="movieName" value="K2"></constructor-arg>
+    <constructor-arg name="actor" value="actor1"></constructor-arg>
+    </bean>
+    <bean id="movie2" class="com.stackroute.domain.Movie">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="movieName" value="Killer"></constructor-arg>
+        <constructor-arg name="actor" value="actor2"></constructor-arg>
+    </bean>
+    <bean xml:id="applicationContextAwareDemo" class="com.stackroute.awareInterface.ApplicationContexAwaretDemo"/>
 
   <!--  </bean>
     <bean id="beanFactoryAwareDemo" class="com.stackroute.awareInterface.BeanFactoryAwareDemo"></bean>
