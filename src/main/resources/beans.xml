@@ -21,7 +21,7 @@
 
     <bean xml:id="applicationContextAwareDemo" class="com.stackroute.awareInterface.ApplicationContexAwaretDemo">
 
-    </bean>
+  <!--  </bean>
     <bean id="beanFactoryAwareDemo" class="com.stackroute.awareInterface.BeanFactoryAwareDemo"></bean>
 
     <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
@@ -31,4 +31,5 @@
     <bean id="beanLifecycleDemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
     </bean>
     <bean id="beanPostProcessorDemo" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
+-->
 </beans>

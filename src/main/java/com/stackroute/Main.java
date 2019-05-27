@@ -28,9 +28,9 @@ public class Main {
         System.out.println(movie1==movie2);
        Movie movie1=context.getBean("Doctor",Movie.class);
         Movie movie2=context.getBean("Highkick",Movie.class);
-        System.out.println(movie1==movie2);*/
+        System.out.println(movie1==movie2);
 
        ClassPathXmlApplicationContext obj=(ClassPathXmlApplicationContext)context;
-       obj.destroy();
+       obj.destroy();*/
     }
 }
